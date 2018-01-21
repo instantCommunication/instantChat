@@ -1,0 +1,30 @@
+{
+  "name": "lowfly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlightMonitorApp/LowFly.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlightMonitorApp/LowFly/issues"
+  },
+  "homepage": "https://github.com/FlightMonitorApp/LowFly#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "path": "^0.12.7",
+    "puppeteer": "^1.0.0",
+    "request": "^2.83.0"
+  }
+}

@@ -1,1 +1,1 @@
-# LowFly
+LowFly is a Flight Price Monitoring Tool which helps to keep track of change in flight fare by SMS notifications.
