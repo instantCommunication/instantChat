@@ -35,7 +35,7 @@ app.use(cookieParser());
 //Static Folder for Styles
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+//comment
 // Express Session
 app.use(session({
     secret: 'secret',
