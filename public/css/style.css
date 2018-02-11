@@ -93,7 +93,7 @@ footer{
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: .95rem;
-} 
+}
 
 ul, li {
   list-style-position: inside !important;
@@ -145,7 +145,7 @@ button:disabled {
   border: 1px solid #e1e1e1;
   border-radius: 5px;
   padding: 0px 20px;
-  margin: 20px !important; 
+  margin: 20px !important;
   width: auto;
 }
 
@@ -168,13 +168,13 @@ button:disabled {
 }
 
 .chat {
-  display: flex;
+  display: flex !important;
 }
 
 .chatSidebar {
   overflow-y: scroll;
-  width: 260px;
-  height: 100vh;
+  width: 260px !important;
+  height: 100vh !important;
   background: -moz-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* ff3.6+ */
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(49,84,129,1)), color-stop(100%, rgba(39,107,130,1))); /* safari4+,chrome */
   background: -webkit-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* safari5.1+,chrome10+ */
@@ -184,9 +184,9 @@ button:disabled {
 }
 
 .chatSidebar h3 {
-  color: #e6eaee;
-  margin: 10px 20px;
-  text-align: left;
+  color: #e6eaee !important;
+  margin: 10px 20px !important;
+  text-align: left !important;
 }
 
 .chatSidebar ul {
@@ -202,9 +202,9 @@ button:disabled {
 }
 
 .chatMain {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  height: 100vh;
+  height: 100vh !important;
   width: 100%;
 }
 
@@ -266,19 +266,18 @@ button:disabled {
   }
 
   .chatSidebar {
-    display: none;
+    display: none !important;
   }
 
   .chatFooter {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .chatFooter form {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
   }
 
   .chatFooter button {
-    margin-right: 0px;
+    margin-right: 0px !important;
   }
 }
-
