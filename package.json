@@ -23,6 +23,8 @@
     "mongoose": "*",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "moment": "*",
+    "socket.io": "*"
   }
 }

@@ -25,6 +25,12 @@ router.get('/groupchat', function (req, res, next) {
 }
 });
 
+// Room
+router.get('/room', function (req, res) {
+	if (req.user) res.render('joinroom');
+	else res.render('login');
+});
+
 // Register User
 router.post('/register', function (req, res) {
 	var name = req.body.name;
