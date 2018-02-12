@@ -12,6 +12,7 @@ var mongoose = require('mongoose');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
+const { generateMessage, generateLocationMessage } = require('./message');
 
 //Connection to mongoDB
 mongoose.connect('mongodb://localhost/loginapp');
@@ -81,13 +82,41 @@ app.use(expressValidator({
   });
 
 
+  io.on('connection', (socket) => {
+    console.log("New user connected ");
+
+    socket.emit('newMessage', generateMessage('Admin', 'Welcome to the Chat App'));
+    socket.broadcast.emit('newMessage', generateMessage('Admin', 'New User Connected'));
+
+    socket.on('createMessage', (message, callback) => {
+        console.log("Create Message", message);
+        io.emit('newMessage', generateMessage(message.from, message.text));
+        callback('');
+        // socket.broadcast.emit('newMessage',{   //to emit event to every connected client excluding itself
+        //         to:message.to,
+        //         text:message.text,
+        //         createdAt: new Date().getTime()
+        //     });
+
+        socket.on('createLocationMessage', (coords)=>{
+            io.emit('newLocationMessage', generateLocationMessage('Admin', coords.latitude,coords.longitude))
+        })
+
+    });
+
+
+    socket.on('disconnect', () => {
+        console.log("Client Disconnected");
+    });
+});
+
 
   app.use('/', routes);
   app.use('/users', users);
 
   // Set Port
-  app.set('port', (process.env.PORT || 3000));
+  const port = process.env.PORT || 3000;
 
-  app.listen(app.get('port'), function(){
-      console.log('Server started on port '+app.get('port'));
-  });
+  server.listen(port, () => {
+    console.log(`Server started on ${port}`);
+});
