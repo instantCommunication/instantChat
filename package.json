@@ -19,12 +19,13 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
+    "fs": "0.0.1-security",
+    "moment": "*",
     "mongodb": "*",
     "mongoose": "*",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*",
-    "moment": "*",
     "socket.io": "*"
   },
   "devDependencies": {
