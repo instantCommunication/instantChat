@@ -27,7 +27,7 @@ router.get('/groupchat', function (req, res, next) {
 
 // Room
 router.get('/room', function (req, res) {
-	if (req.user) res.render('joinroom');
+	if (req.user) res.render('joinroom', { title: 'my other page', layout: 'chat' });
 	else res.render('login');
 });
 
