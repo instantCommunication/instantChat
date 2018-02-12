@@ -39,6 +39,10 @@ app.use(cookieParser());
 //Static Folder for Styles
 app.use(express.static(path.join(__dirname, 'public')));
 
+io.on('connection',(socket) => {
+  console.log('New user connected');
+});
+
 //comment
 // Express Session
 app.use(session({
