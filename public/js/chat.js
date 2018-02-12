@@ -18,7 +18,7 @@ function scrollToBottom() {
 
 
 socket.on('connect', function () {
-    console.log("Connect to BSDK");
+    console.log("Connect to Network");
 
 });
 
