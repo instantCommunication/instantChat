@@ -17,7 +17,14 @@ const {isRealString} = require('./validation');
 const {Users} = require('./users');
 
 //Connection to mongoDB
-mongoose.connect('mongodb://localhost/loginapp');
+mongoose.Promise = global.Promise;
+
+if (process.env.PORT) {
+  mongoose.connect('mongodb://admin:admin@ds141657.mlab.com:41657/chatapp');
+} else {
+  mongoose.connect('mongodb://localhost/loginapp');
+}
+
 var db = mongoose.connection;
 
 //Routes For Pages
