@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var fs = require('fs');
+var http = require('http');
 
 var User = require('../models/user');
 
@@ -27,7 +29,19 @@ router.get('/groupchat', function (req, res, next) {
 
 // Room
 router.get('/room', function (req, res) {
-	if (req.user) res.render('joinroom', { title: 'my other page', layout: 'chat' });
+	if (req.user) {
+		fs.readFile('./joinroom.html', function (error, pgResp) {
+            if (error) {
+                res.writeHead(404);
+                res.write('Contents you are looking are Not Found');
+            } else {
+                res.writeHead(200, { 'Content-Type': 'text/html' });
+                res.write(pgResp);
+            }
+
+            res.end();
+        });
+	}
 	else res.render('login');
 });
 

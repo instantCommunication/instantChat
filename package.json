@@ -19,12 +19,18 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
+    "fs": "0.0.1-security",
+    "moment": "*",
     "mongodb": "*",
     "mongoose": "*",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*",
-    "moment": "*",
     "socket.io": "*"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.0.2",
+    "nodemon": "^1.10.2"
   }
 }
