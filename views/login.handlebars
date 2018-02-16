@@ -1,12 +1,43 @@
-<h2 class="page-header">Account Login</h2>
-<form method="post" action="/people/login">
-  <div class="form-group">
-    <label>Username</label>
-    <input type="text" class="form-control" name="username" placeholder="Username">
-  </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" name="password" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<h1>Welcome to the Chat App</h1>
+<div class="grid">
+
+  <form action="/people/login" method="POST" class="form login">
+
+    <div class="form__field">
+      <label for="login__username">
+        <svg class="icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
+        </svg>
+        <span class="hidden">Username</span>
+      </label>
+      <input id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
+    </div>
+
+    <div class="form__field">
+      <label for="login__password">
+        <svg class="icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use>
+        </svg>
+        <span class="hidden">Password</span>
+      </label>
+      <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
+    </div>
+
+    <div class="form__field">
+      <input type="submit" value="Sign In">
+    </div>
+
+  </form>
+
+  <p class="text--center">Not a member?
+    <a href="/people/register">Sign up now</a>
+    <svg class="icon">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use>
+    </svg>
+  </p>
+
+</div>
+
+<footer class="footer">
+  <p>&copy; 2018 Online World, Inc.</p>
+</footer>
