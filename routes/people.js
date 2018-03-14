@@ -6,7 +6,7 @@ var fs = require('fs');
 var http = require('http');
 
 var User = require('../models/user');
-const {Users} = require('../users');
+const {Users} = require('../internal/users');
 var users = new Users();
 
 // Register
@@ -32,7 +32,7 @@ router.get('/groupchat', function (req, res, next) {
 // Room
 router.get('/room', function (req, res) {
 	if (req.user) {
-		fs.readFile('./joinroom.html', function (error, pgResp) {
+		fs.readFile('./internal/joinroom.html', function (error, pgResp) {
             if (error) {
                 res.writeHead(404);
                 res.write('Contents you are looking are Not Found');

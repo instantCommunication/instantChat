@@ -12,9 +12,9 @@ var mongoose = require('mongoose');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
-const {generateMessage, generateLocationMessage} = require('./message');
-const {isRealString} = require('./validation');
-const {Users} = require('./users');
+const {generateMessage, generateLocationMessage} = require('./internal/message');
+const {isRealString} = require('./internal/validation');
+const {Users} = require('./internal/users');
 
 //Connection to mongoDB
 mongoose.Promise = global.Promise;
