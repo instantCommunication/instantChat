@@ -6,6 +6,8 @@ var fs = require('fs');
 var http = require('http');
 
 var User = require('../models/user');
+const {Users} = require('../users');
+var users = new Users();
 
 // Register
 router.get('/register', function (req, res) {
@@ -122,6 +124,12 @@ router.post('/login',
 	function (req, res) {
 		res.redirect('/');
 	});
+
+router.post('/groupchat', function(req, res) {
+	console.log('Hello');
+	var name = req.body.name;
+	console.log(name);
+});
 
 
 

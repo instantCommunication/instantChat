@@ -96,18 +96,27 @@ app.use(expressValidator({
     console.log('New user connected');
 
     socket.on('join', (params, callback) => {
+      var check = users.getUserList(params.room);
+      var flag=0;
+    	for (var i = 0;i<check.length;i++) {
+    		if (check[i] === params.name) {
+          flag = 1;
+          callback('username already exist ');
+        }
+    	}
       if (!isRealString(params.name) || !isRealString(params.room)) {
         callback('Name and room name is required.');
       }
+      if (!flag) {
+        socket.join(params.room);
+        users.removeUser(socket.id);
+        users.addUser(socket.id, params.name, params.room);
 
-      socket.join(params.room);
-      users.removeUser(socket.id);
-      users.addUser(socket.id, params.name, params.room);
-
-      io.to(params.room).emit('updateUserList', users.getUserList(params.room));
-      socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
-      socket.broadcast.to(params.room).emit('newMessage', generateMessage('Admin', `${params.name} has joined`));
-      callback();
+        io.to(params.room).emit('updateUserList', users.getUserList(params.room));
+        socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
+        socket.broadcast.to(params.room).emit('newMessage', generateMessage('Admin', `${params.name} has joined`));
+        callback();
+      }
     });
 
     socket.on('createMessage', (message, callback) => {

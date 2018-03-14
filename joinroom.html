@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="/css/room.css" />
   </head>
 
-  
+
   <body class="chat">
-    
+
     <div class="chat__sidebar">
       <h3>People</h3>
       <div id="users"></div>
@@ -55,6 +55,11 @@
       </li>
     </script>
 
+    <script>
+      window.onbeforeunload = function(event) {
+          event.returnValue = "Write something clever here..";
+      };
+    </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/libs/jquery-3.2.1.min.js"></script>
     <script src="/js/libs/moment.js"></script>

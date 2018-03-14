@@ -4,7 +4,8 @@ class Users {
   }
   addUser (id, name, room) {
     var user = {id, name, room};
-    this.users.push(user);
+    var check = this.users.filter((people) => people.id === id);
+    if (check.length === 0) this.users.push(user);
     return user;
   }
   removeUser (id) {
