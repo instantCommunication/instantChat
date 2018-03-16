@@ -1,5 +1,5 @@
 # Node.js Chat App
-
+[![Build Status](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source.svg?branch=master)](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source)
 This is a chat app using Node.js, Express, Passport and Mongoose.
 
 ### Version
