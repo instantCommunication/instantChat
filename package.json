@@ -21,7 +21,7 @@
     "express-validator": "*",
     "fs": "0.0.1-security",
     "moment": "*",
-    "mongodb": "*",
+    "mongodb": "3.6.3",
     "mongoose": "*",
     "passport": "*",
     "passport-http": "*",
