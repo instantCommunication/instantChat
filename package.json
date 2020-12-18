@@ -22,7 +22,7 @@
     "fs": "0.0.1-security",
     "moment": "*",
     "mongodb": "*",
-    "mongoose": "*",
+    "mongoose": "5.10.15",
     "passport": "*",
     "passport-http": "*",
     "passport-local": "*",
