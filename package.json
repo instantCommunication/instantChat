@@ -21,7 +21,7 @@
     "express-session": "1.17.1",
     "express-validator": "*",
     "fs": "0.0.1-security",
-    "moment": "*",
+    "moment": "2.29.1",
     "mongodb": "*",
     "mongoose": "5.10.15",
     "passport": "*",
