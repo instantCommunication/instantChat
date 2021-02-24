@@ -1,6 +1,6 @@
-# Real Time Chat Application  [![Build Status](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source.svg?branch=master)](https://travis-ci.org/freeCodeCamp/how-to-contribute-to-open-source)
+# Real Time Chat Application  [![Build Status](https://travis-ci.org/instantCommunication/instantChat.svg?branch=master)](https://travis-ci.org/instantCommunication/instantChat)
 
-This is a chat app using Node.js, Express, Passport and Mongoose.
+Real time chat application using Node.js, Express, Passport and Mongoose.
 
 ### Login Screen
 ![screenshot 18](https://user-images.githubusercontent.com/15276039/37565405-e5d92b1e-2ace-11e8-9363-678b7166e850.png)
@@ -15,14 +15,24 @@ This is a chat app using Node.js, Express, Passport and Mongoose.
 1.1.0
 
 
-## Installation
+### Installation 
 
-Chat App requires [Node.js](https://nodejs.org/) v4+ to run. Run these commands to get started
+This application requires [NodeJS](https://nodejs.org/) v4+ to run. Run these commands to get started:
 
+#### Clone the Repository:
+
+```
+git clone https://github.com/instantCommunication/instantChat.git && cd instantChat
+```
+
+#### Install required packages and dependencies:
 ```
 npm install
 ```
 
+### Running the application:
+
+#### Start the local server
 ```
 npm start
 ```
